@@ -23,6 +23,7 @@ def get_data(filename):
 
 test_data = get_data('test_data.txt')
 
+random.shuffle(test_data)
 # Remove stopwords and obtain features: 
 stop_words=set(stopwords.words("english"))	
 w2v = gensim.models.KeyedVectors.load_word2vec_format('glove.6B.50d.txt', binary=False)  
