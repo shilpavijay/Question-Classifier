@@ -23,10 +23,8 @@ def get_data(filename):
 
 test_data = get_data('test_data.txt')
 
-# Remove stopwords, lemmatize and obtain features: 
+# Remove stopwords and obtain features: 
 stop_words=set(stopwords.words("english"))	
-lemmatizer = WordNetLemmatizer()
-better_words = []
 w2v = gensim.models.KeyedVectors.load_word2vec_format('glove.6B.50d.txt', binary=False)  
 
 def word_vectorization(wvec,question):
